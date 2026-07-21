@@ -5,12 +5,12 @@
 Systems-focused engineer who builds performance-critical, production-shaped software across three
 domains that rarely meet in one portfolio: **algorithmic trading engineering**, **full-stack SaaS**,
 and **DevOps / cloud infrastructure**. Low-latency event-driven architecture, strict testing and
-typing discipline, security-by-default — and unusually honest documentation: I ship the code *and*
+typing discipline, security-by-default and unusually honest documentation: I ship the code *and*
 the verdict on whether it actually works.
 
 <sub>מהנדס עם ראייה מערכתית הבונה תוכנה ביצועית ברמת production בשלושה תחומים שנדיר למצוא יחד:
 הנדסת מסחר אלגוריתמי, SaaS פול-סטאק, ותשתיות DevOps/ענן. ארכיטקטורה מונחית-אירועים בזמן-תגובה נמוך,
-משמעת בדיקות וטיפוסים, אבטחה כברירת מחדל — ותיעוד כן: אני מפרסם גם את הקוד וגם את המסקנה אם הוא באמת עובד.</sub>
+משמעת בדיקות וטיפוסים, אבטחה כברירת מחדל ותיעוד כן: אני מפרסם גם את הקוד וגם את המסקנה אם הוא באמת עובד.</sub>
 
 ---
 
@@ -56,13 +56,13 @@ the verdict on whether it actually works.
 > **Production-Ready by Default:** every codebase is written with exhaustive error handling, strict
 > validation layers, and dependency injection to guarantee full offline testability.
 
-* **Low-latency & decoupled** — async background workers ensure blocking I/O or remote IPC never
+* **Low-latency & decoupled** async background workers ensure blocking I/O or remote IPC never
   halts execution; critical paths avoid allocation churn and GC spikes.
-* **Security-first** — secrets never enter version control (`.env.example` only), credentials
+* **Security-first** secrets never enter version control (`.env.example` only), credentials
   encrypted at rest, demo-guards on anything touching real money, hardened SSH/containers.
-* **Verifiable rigor** — mypy-strict, coverage-gated test suites (FreqTrading ships **445 passing
+* **Verifiable rigor** mypy-strict, coverage-gated test suites (FreqTrading ships **445 passing
   tests**; the Docker CLI holds **100% coverage**), CI that gates on every push.
-* **Honest documentation** — I record strategies that *lose* under realistic costs instead of
+* **Honest documentation** I record strategies that *lose* under realistic costs instead of
   hiding them, and track every system with a file-based lifecycle protocol
   (`STATUS.md`, `DECISIONS.md`, `PROGRESS.md`).
 
