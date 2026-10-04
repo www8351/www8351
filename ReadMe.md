@@ -1,15 +1,12 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:13293d,100:1f6feb&height=190&section=header&text=Refael%20Malka&fontSize=46&fontColor=ffffff&fontAlignY=36&desc=Trading%20Systems%20%E2%80%A2%20Full-Stack%20SaaS%20%E2%80%A2%20DevOps%20%26%20Cloud&descSize=17&descAlignY=58" alt="Refael Malka" width="100%"/>
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=19&pause=1200&color=58A6FF&center=true&vCenter=true&width=620&lines=I+ship+the+code+and+the+verdict+on+whether+it+works.;Deterministic+engines.+Hardened+containers.;Tests+first.+Secrets+never+in+git." alt="Typing intro"/>
+<img src="assets/header.svg" alt="Refael Malka. Trading Systems, Full-Stack SaaS, DevOps and Cloud" width="100%"/>
 
 <br/>
 
 <a href="https://github.com/www8351"><img src="https://img.shields.io/badge/GitHub-www8351-181717?style=flat-square&logo=github" alt="GitHub"/></a>
 <img src="https://img.shields.io/badge/Based%20in-Israel-1f6feb?style=flat-square" alt="Israel"/>
 <img src="https://img.shields.io/badge/Speaks-Hebrew%20%C2%B7%20English-2ea043?style=flat-square" alt="Languages"/>
-<img src="https://komarev.com/ghpvc/?username=www8351&style=flat-square&color=8250df&label=Profile+views" alt="Profile views"/>
 
 </div>
 
@@ -114,11 +111,11 @@ Hardened containers, IaC, CI/CD, supply-chain security, observability
 
 | | |
 | :-- | :-- |
-| 💬 **Languages** | <img src="https://skillicons.dev/icons?i=py,ts,bash,powershell,postgres&theme=dark" alt="Languages"/> &nbsp; ![MQL5](https://img.shields.io/badge/MQL5-0b3d91?style=flat-square) |
-| 🌐 **Frontend & SaaS** | <img src="https://skillicons.dev/icons?i=react,nextjs,threejs,tailwind,vercel&theme=dark" alt="Frontend"/> |
-| ⚙️ **Backend & Realtime** | <img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,supabase&theme=dark" alt="Backend"/> |
-| ☁️ **DevOps & Cloud** | <img src="https://skillicons.dev/icons?i=docker,githubactions,jenkins,nginx,aws,linux&theme=dark" alt="DevOps"/> |
-| 🔭 **Observability** | <img src="https://skillicons.dev/icons?i=prometheus,grafana&theme=dark" alt="Observability"/> &nbsp; Loki · Vector |
+| 💬 **Languages** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white) ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-336791?style=flat-square&logo=postgresql&logoColor=white) ![MQL5](https://img.shields.io/badge/MQL5-0B3D91?style=flat-square) |
+| 🌐 **Frontend & SaaS** | ![React 19](https://img.shields.io/badge/React%2019-20232A?style=flat-square&logo=react&logoColor=white) ![Next.js 16](https://img.shields.io/badge/Next.js%2016-000000?style=flat-square&logo=nextdotjs&logoColor=white) ![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) ![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white) |
+| ⚙️ **Backend & Realtime** | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) ![Express 5](https://img.shields.io/badge/Express%205-000000?style=flat-square&logo=express&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white) ![Drizzle](https://img.shields.io/badge/Drizzle-C5F74F?style=flat-square&logo=drizzle&logoColor=black) |
+| ☁️ **DevOps & Cloud** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white) ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white) ![OpenTofu](https://img.shields.io/badge/OpenTofu-FFDA18?style=flat-square&logo=opentofu&logoColor=black) ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) |
+| 🔭 **Observability** | ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white) ![Loki](https://img.shields.io/badge/Loki-F46800?style=flat-square&logo=grafana&logoColor=white) ![Vector](https://img.shields.io/badge/Vector-1F6FEB?style=flat-square) |
 | 🛡️ **Security** | Trivy · CycloneDX SBOM · cosign · gitleaks · UFW and SSH hardening · Cilium · Falco |
 | ✅ **Quality** | pytest · vitest · bats · mypy strict · ruff · coverage gates · TDD |
 | 📈 **Trading** | MetaTrader 5 API · TwelveData · Tradovate · TopstepX · Rithmic |
@@ -155,6 +152,6 @@ Hardened containers, IaC, CI/CD, supply-chain security, observability
 
 <sub><i>"No filler. Clean architecture and deterministic performance."</i></sub>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1f6feb,50:13293d,100:0d1117&height=110&section=footer" alt="" width="100%"/>
+<img src="assets/footer.svg" alt="" width="100%"/>
 
 </div>
