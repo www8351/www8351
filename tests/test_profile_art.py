@@ -140,6 +140,22 @@ class RenderTests(unittest.TestCase):
         self.assertEqual(weeks, 53)
         self.assert_svg(rh.render(None))
 
+    def test_heatmap_fits_a_54_week_calendar(self) -> None:
+        # Sunday start, Saturday end: 378 days span 54 week columns.
+        days = [
+            {"date": (date(2025, 10, 5) + timedelta(days=i)).isoformat(), "count": 1, "level": 1}
+            for i in range(378)
+        ]
+        self.assertEqual(rh.week_count(days), 54)
+        data = {"user": "x", "generated_at": "2026-10-06T00:00:00Z", "stats": fc.stats(days, None), "days": days}
+        root = self.assert_svg(rh.render(data, False))
+        cells = [e for e in root.iter() if e.tag.endswith("rect") and e.find("{http://www.w3.org/2000/svg}title") is not None]
+        self.assertEqual(len(cells), 378)
+        left = min(float(e.get("x")) for e in cells)
+        right = max(float(e.get("x")) + rh.CELL for e in cells)
+        self.assertGreaterEqual(left, rh.PAD)
+        self.assertLessEqual(right, rh.WIDTH - rh.PAD)
+
     def test_whoami(self) -> None:
         lines = ["  .:-=+*#%@", "", " <&> \"q\""]
         for animate in (True, False):

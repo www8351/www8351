@@ -43,9 +43,19 @@ def plural(n: int) -> str:
     return "day" if n == 1 else "days"
 
 
-def grid(days: list[dict], x0: float, y0: float, animate: bool) -> tuple[str, int]:
+def _sunday(days: list[dict]) -> int:
     first = date.fromisoformat(days[0]["date"])
-    sunday = first.toordinal() - (first.weekday() + 1) % 7
+    return first.toordinal() - (first.weekday() + 1) % 7
+
+
+def week_count(days: list[dict]) -> int:
+    """Week columns the calendar spans, usually 53, sometimes 54."""
+    last = date.fromisoformat(days[-1]["date"]).toordinal()
+    return (last - _sunday(days)) // 7 + 1
+
+
+def grid(days: list[dict], x0: float, y0: float, animate: bool) -> tuple[str, int]:
+    sunday = _sunday(days)
     cells, months = [], []
     last_label_week = -4
     prev_month = None
@@ -94,7 +104,7 @@ def render(data: dict | None, animate: bool = True) -> str:
     days = data["days"] if data else placeholder_days()
     s = data["stats"] if data else None
 
-    grid_w = 53 * PITCH - GAP
+    grid_w = week_count(days) * PITCH - GAP
     x0 = (WIDTH - LABEL_W - grid_w) / 2 + LABEL_W
     y0 = TITLE_BAR + PAD + 18
     cells, _ = grid(days, x0, y0, animate)
