@@ -1,0 +1,47 @@
+name: Refresh contribution graph
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "tests/**"
+      - ".github/workflows/refresh-contributions.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-contributions
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Test
+        run: python3 -m unittest discover -s tests
+
+      - name: Fetch contributions
+        run: python3 scripts/fetch_contributions.py
+
+      - name: Render graph
+        run: python3 scripts/render_heatmap_svg.py
+
+      - name: Commit if changed
+        run: |
+          git add data/contributions.json assets/contrib-heatmap.svg
+          if git diff --cached --quiet; then
+            echo "No change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: refresh contribution graph"
+          git push

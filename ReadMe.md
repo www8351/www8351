@@ -1,60 +1,22 @@
 <div align="center">
 
-<img src="assets/header.svg" alt="Refael Malka. Trading Systems, Full-Stack SaaS, DevOps and Cloud" width="100%"/>
+<img src="assets/whoami.svg" width="100%" alt="refael@github whoami: ASCII portrait of Refael Malka beside a system info card. Systems Engineer, Trading, SaaS and DevOps, based in Israel."/>
 
-<br/>
+<br/><br/>
 
-<a href="https://github.com/www8351"><img src="https://img.shields.io/badge/GitHub-www8351-181717?style=flat-square&logo=github" alt="GitHub"/></a>
-<img src="https://img.shields.io/badge/Based%20in-Israel-1f6feb?style=flat-square" alt="Israel"/>
-<img src="https://img.shields.io/badge/Speaks-Hebrew%20%C2%B7%20English-2ea043?style=flat-square" alt="Languages"/>
+<img src="assets/contrib-heatmap.svg" width="100%" alt="GitHub contribution graph for the last year, refreshed daily."/>
+
+<h3><code>refael@github ~ $ ./links.sh</code></h3>
+
+<a href="https://github.com/www8351"><img src="https://img.shields.io/badge/GitHub-www8351-181717?style=for-the-badge&logo=github" alt="GitHub"/></a>
+<a href="https://www.linkedin.com/in/refael8351"><img src="https://img.shields.io/badge/LinkedIn-refael8351-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+<img src="https://img.shields.io/badge/Based%20in-Israel-3fb950?style=for-the-badge" alt="Based in Israel"/>
 
 </div>
 
 <br/>
 
-## 👋 About
-
-Systems engineer who builds performance-critical, production-shaped software in three fields that
-rarely share one portfolio. Every project states plainly what it does today and what it does not do yet.
-
-|  |  |
-| :-- | :-- |
-| 🎯 **Focus** | Algorithmic trading engines, typed SaaS platforms, hardened infrastructure |
-| 🔭 **Building now** | Account Guardian, an account-level risk lock for MetaTrader 5 |
-| 🧪 **Standard** | mypy strict, coverage gates, CI on every push |
-| 🔐 **Default** | Secrets out of git, real-money paths off until explicitly enabled |
-| 🖥️ **Daily driver** | PowerShell terminal, hardened Linux |
-
-<br/>
-
-## 🧭 Three Pillars
-
-<table>
-<tr>
-<td width="33%" valign="top" align="center">
-
-### 📈 Trading
-Signal engines, account-level risk enforcement, broker integration, copy trading
-
-</td>
-<td width="33%" valign="top" align="center">
-
-### 🌐 SaaS
-Typed end-to-end web apps, real-time streaming, payments, row-level auth
-
-</td>
-<td width="33%" valign="top" align="center">
-
-### 🛠️ DevOps
-Hardened containers, IaC, CI/CD, supply-chain security, observability
-
-</td>
-</tr>
-</table>
-
-<br/>
-
-## 🚀 Projects
+## 🚀 `ls ~/projects`
 
 > 🟢 Released or complete &nbsp;·&nbsp; 🟡 In development &nbsp;·&nbsp; 🔵 Public showcase of a private codebase
 
@@ -94,7 +56,7 @@ Hardened containers, IaC, CI/CD, supply-chain security, observability
 
 <br/>
 
-## 📊 Proof in Numbers
+## 🧪 `./run-tests --all`
 
 | 🧪 Project | Tests | Coverage | Gate |
 | :-- | :-: | :-: | :-- |
@@ -107,7 +69,7 @@ Hardened containers, IaC, CI/CD, supply-chain security, observability
 
 <br/>
 
-## 🛠️ Stack
+## 🛠️ `cat stack.txt`
 
 | | |
 | :-- | :-- |
@@ -122,7 +84,7 @@ Hardened containers, IaC, CI/CD, supply-chain security, observability
 
 <br/>
 
-## 🎯 How I Work
+## 🎯 `man refael`
 
 | | Principle | In practice |
 | :-: | :-- | :-- |
@@ -146,12 +108,8 @@ Hardened containers, IaC, CI/CD, supply-chain security, observability
 
 <div align="center">
 
-### 📬 Let's Connect
-
-<a href="https://github.com/www8351"><img src="https://img.shields.io/badge/Follow-www8351-1f6feb?style=for-the-badge&logo=github" alt="Follow"/></a>
-
 <sub><i>"No filler. Clean architecture and deterministic performance."</i></sub>
 
-<img src="assets/footer.svg" alt="" width="100%"/>
+<code>refael@github ~ $ exit</code>
 
 </div>
