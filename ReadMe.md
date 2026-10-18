@@ -28,9 +28,9 @@
 
 ### 🛠️ מה עוד אני בונה
 
-- א. ⚙️ כלי DevOps עם בדיקות אוטומטיות ו-Pipeline מלא
-- ב. 🐳 Docker Container: סריקת אבטחה, Images, כיסוי בדיקות מלא
-- ג. 🔁 Jenkins and GitHub Actions, מתחילת הפיתוח ועד הפריסה לפרודקשן.
+- ⚙️ כלי DevOps עם בדיקות אוטומטיות ו-Pipeline מלא
+- 🐳 Docker Container: סריקת אבטחה, Images, כיסוי בדיקות מלא
+- 🔁 Jenkins and GitHub Actions, מתחילת הפיתוח ועד הפריסה לפרודקשן.
 
 </div>
 
