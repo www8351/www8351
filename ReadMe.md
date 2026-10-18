@@ -111,8 +111,6 @@
 
 <div align="center">
 
-<sub><i>"No filler. Clean architecture and deterministic performance."</i></sub>
-
 <code>refael@github ~ $ exit</code>
 
 </div>
