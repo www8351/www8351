@@ -54,6 +54,7 @@
 | 🟡 | [**Gold_BOT_Alaret**](https://github.com/www8351/Gold_BOT_Alaret) | XAUUSD signal engine on ICT Quarterly Theory | `Python` |
 | 🟡 | [**Agent-AI**](https://github.com/www8351/Agent-AI) | Market intelligence for futures, gold and crypto, advisory only | `Python` |
 | 🟢 | [**AccountGuardian**](https://github.com/www8351/AccountGuardian-Release) | Locks the whole MT5 account at its daily loss limit | `MQL5` |
+| 🟢 | [**Account_Guardian-V1**](https://github.com/www8351/Account_Guardian-V1) | Source of the released guardian, with spec, test vectors and evidence | `MQL5` `PowerShell` |
 | 🟡 | [**Account_Guardian_V2**](https://github.com/www8351/Account_Guardian_V2) | Next guardian version, adds an equity peak floor | `MQL5` |
 
 ### 🌐 Full-Stack SaaS
