@@ -16,6 +16,31 @@
 
 <br/>
 
+<div dir="rtl">
+
+## 👋 קצת עליי
+
+אני עובד עם סוכני בינה מלאכותית בפיתוח תוכנה, לפי שיטה קבועה:
+
+- 🧭 **אני מחליט**, הסוכן מבצע
+- 🔒 **כל החלטה** נרשמת וננעלת
+- ✅ **שום משימה** לא נסגרת בלי הוכחה
+
+### 🛠️ מה עוד אני בונה
+
+- ⚙️ כלי דבאופס עם בדיקות אוטומטיות וצינורות בנייה
+- 📈 מערכות מסחר אלגוריתמי
+
+</div>
+
+<p align="center">
+  <img alt="Claude Code" src="https://img.shields.io/badge/Claude_Code-AI_Workflows-D97757?style=for-the-badge" />
+  <img alt="DevOps" src="https://img.shields.io/badge/DevOps-Tested_CI-2088FF?style=for-the-badge" />
+  <img alt="MQL5" src="https://img.shields.io/badge/MQL5-Trading_Systems-F7B500?style=for-the-badge" />
+</p>
+
+<br/>
+
 ## 🚀 `ls ~/projects`
 
 > 🟢 Released or complete<br/>
@@ -99,31 +124,6 @@
 | 🔐 | **Security first** | `.env.example` only, credentials encrypted at rest, real-money paths off by default |
 | 🧪 | **Verifiable** | Strict typing, coverage-gated suites, CI that blocks every push |
 | 📝 | **Honest docs** | Each README says what the build does not do yet |
-
-<br/>
-
-<div dir="rtl">
-
-## 👋 קצת עליי
-
-אני עובד עם סוכני בינה מלאכותית בפיתוח תוכנה, לפי שיטה קבועה:
-
-- 🧭 **אני מחליט**, הסוכן מבצע
-- 🔒 **כל החלטה** נרשמת וננעלת
-- ✅ **שום משימה** לא נסגרת בלי הוכחה
-
-### 🛠️ מה עוד אני בונה
-
-- ⚙️ כלי דבאופס עם בדיקות אוטומטיות וצינורות בנייה
-- 📈 מערכות מסחר אלגוריתמי
-
-</div>
-
-<p align="center">
-  <img alt="Claude Code" src="https://img.shields.io/badge/Claude_Code-AI_Workflows-D97757?style=for-the-badge" />
-  <img alt="DevOps" src="https://img.shields.io/badge/DevOps-Tested_CI-2088FF?style=for-the-badge" />
-  <img alt="MQL5" src="https://img.shields.io/badge/MQL5-Trading_Systems-F7B500?style=for-the-badge" />
-</p>
 
 <br/>
 
