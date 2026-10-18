@@ -102,12 +102,28 @@
 
 <br/>
 
-<div dir="rtl" align="right">
+<div dir="rtl">
 
-## 🇮🇱 בקצרה בעברית
-מפתח שבונה ומפעיל תהליכי עבודה עם סוכני בינה מלאכותית, תחת פרוטוקול כתוב: הפרדת תפקידים, יומן החלטות נעול, וסגירת כל משימה רק על ראיה מאומתת. לצד זה, כלי דבאופס עם בדיקות אוטומטיות וצינורות בנייה, ומערכות מסחר אלגוריתמי..
+## 👋 קצת עליי
+
+אני עובד עם סוכני בינה מלאכותית בפיתוח תוכנה, לפי שיטה קבועה:
+
+- 🧭 **אני מחליט**, הסוכן מבצע
+- 🔒 **כל החלטה** נרשמת וננעלת
+- ✅ **שום משימה** לא נסגרת בלי הוכחה
+
+### 🛠️ מה עוד אני בונה
+
+- ⚙️ כלי דבאופס עם בדיקות אוטומטיות וצינורות בנייה
+- 📈 מערכות מסחר אלגוריתמי
 
 </div>
+
+<p align="center">
+  <img alt="Claude Code" src="https://img.shields.io/badge/Claude_Code-AI_Workflows-D97757?style=for-the-badge" />
+  <img alt="DevOps" src="https://img.shields.io/badge/DevOps-Tested_CI-2088FF?style=for-the-badge" />
+  <img alt="MQL5" src="https://img.shields.io/badge/MQL5-Trading_Systems-F7B500?style=for-the-badge" />
+</p>
 
 <br/>
 
