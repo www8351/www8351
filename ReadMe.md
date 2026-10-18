@@ -24,37 +24,37 @@
 
 | | Project | What it does | Stack |
 | :-: | :-- | :-- | :-- |
-| 🟡 | [**Gold_BOT_Alaret**](https://github.com/www8351/Gold_BOT_Alaret) | XAUUSD Quarterly-Theory engine. Deterministic core for quarters, HTF bias, SMC, volume profile and risk, routed to Telegram, a dashboard and MT5. **143 tests.** Live orders built but off by default | `Python` |
-| 🟡 | [**Agent-AI**](https://github.com/www8351/Agent-AI) | QuantCloud-Agent. Market intelligence for futures, gold and crypto that writes trade ideas for human review and never places orders. Phase 1 skeleton: three FastAPI services on a shared core, a Valkey bus, a Supabase schema and a hardened compose stack. **198 tests, 95% coverage gate** | `Python` |
-| 🟢 | [**AccountGuardian**](https://github.com/www8351/AccountGuardian-Release) | Expert Advisor that locks the whole account at its daily loss limit until 01:00 server time. Closes every position, deletes pending orders, and rebuilds the day from broker history so a restart cannot clear the lock. Double-click installer with nine checks. Source: [V1](https://github.com/www8351/Account_Guardian-V1) | `MQL5` |
-| 🟡 | [**Account_Guardian_V2**](https://github.com/www8351/Account_Guardian_V2) | The next version of the guardian, adding an equity peak floor on top of the daily lock. Spec locked, implementation in progress | `MQL5` |
+| 🟡 | [**Gold_BOT_Alaret**](https://github.com/www8351/Gold_BOT_Alaret) | XAUUSD signal engine on ICT Quarterly Theory | `Python` |
+| 🟡 | [**Agent-AI**](https://github.com/www8351/Agent-AI) | Market intelligence for futures, gold and crypto, advisory only | `Python` |
+| 🟢 | [**AccountGuardian**](https://github.com/www8351/AccountGuardian-Release) | Locks the whole MT5 account at its daily loss limit | `MQL5` |
+| 🟡 | [**Account_Guardian_V2**](https://github.com/www8351/Account_Guardian_V2) | Next guardian version, adds an equity peak floor | `MQL5` |
 
 ### 🌐 Full-Stack SaaS
 
 | | Project | What it does | Stack |
 | :-: | :-- | :-- | :-- |
-| 🔵 | [**Vertex_Command_Showcase**](https://github.com/www8351/Vertex_Command_Showcase) | Trade-execution and copy-trading platform. Copy engine, risk engines, live broker WebSockets, Stripe billing, WebGL control center. 26 pages, 55 server modules | `TS` `Python` |
-| 🟡 | [**Syncer_Q**](https://github.com/www8351/Syncer_Q) | The same platform in deployment shape. Vercel SPA plus a single-VPS Docker Compose backend, Nginx WAF and TLS. 45 Postgres tables | `TS` `Python` |
-| 🔵 | [**Trades_Journal**](https://github.com/www8351/Trades_Journal) | Trading journal that rebuilds every trade from raw executions with exact decimal math. Next.js 16, Supabase RLS. **48 tests** | `TS` |
-| 🟢 | [**Tradezella-Example**](https://github.com/www8351/Tradezella-Example) | The journal as a full build record. Crypto, MT4/MT5, futures and equities import, analytics dashboard, deployed on Vercel. **48 tests** | `TS` |
+| 🔵 | [**Vertex_Command_Showcase**](https://github.com/www8351/Vertex_Command_Showcase) | Copy trading and trade execution platform | `TS` `Python` |
+| 🟡 | [**Syncer_Q**](https://github.com/www8351/Syncer_Q) | The same platform, packaged for deployment | `TS` `Python` |
+| 🔵 | [**Trades_Journal**](https://github.com/www8351/Trades_Journal) | Trading journal rebuilt from raw executions | `TS` |
+| 🟢 | [**Tradezella-Example**](https://github.com/www8351/Tradezella-Example) | The journal as a full build, deployed on Vercel | `TS` |
 
 ### 🛠️ DevOps & Systems
 
 | | Project | What it does | Stack |
 | :-: | :-- | :-- | :-- |
-| 🟢 | [**Docker-DevOps-Tooling**](https://github.com/www8351/Docker-DevOps-Tooling) | `dockerctl` typed CLI with a read-only, non-root, cap-dropped compose stack. Trivy gate, SBOMs, cosign-signed multi-arch images. **v0.2.1, 45 tests, 100% coverage** | `Python` |
-| 🟢 | [**Linux-Hardening-and-System**](https://github.com/www8351/Linux-Hardening-and-System) | `ossys` turns shell-injection admin scripts into a safe, testable CLI. Plugin system and a closed-by-default tool server. **206 tests, 82% coverage** | `Python` |
-| 🟢 | [**Build-Test-Deploy**](https://github.com/www8351/Build-Test-Deploy) | DevOps lab from interactive menus to a Jenkins pipeline. 6 build jobs plus 8 security and cloud jobs. **40 tests at 93% + 16 bats** | `Python` `Shell` |
-| 🟢 | [**5-DevOps-Toolkit**](https://github.com/www8351/5-DevOps-Toolkit) | Single-purpose Linux, Docker and AWS tools on one shared engine, each with `--help`, dry-run and root guards. **53 tests, 5 green CI checks** | `Shell` `Python` |
-| 🟡 | [**Active_Directory**](https://github.com/www8351/Active_Directory) | Numbered admin scripts for local users, groups and folder rights. 11 PowerShell scripts, from creating a user to a full user, group and ACL provision in one call, plus a non-interactive `chpasswd` script for Linux | `PowerShell` `Shell` |
+| 🟢 | [**Docker-DevOps-Tooling**](https://github.com/www8351/Docker-DevOps-Tooling) | Typed Docker CLI with signed, scanned images | `Python` |
+| 🟢 | [**Linux-Hardening-and-System**](https://github.com/www8351/Linux-Hardening-and-System) | Safe, testable CLI replacing admin shell scripts | `Python` |
+| 🟢 | [**Build-Test-Deploy**](https://github.com/www8351/Build-Test-Deploy) | DevOps lab from shell menus to a Jenkins pipeline | `Python` `Shell` |
+| 🟢 | [**5-DevOps-Toolkit**](https://github.com/www8351/5-DevOps-Toolkit) | Linux, Docker and AWS tools on one shared engine | `Shell` `Python` |
+| 🟡 | [**Active_Directory**](https://github.com/www8351/Active_Directory) | Scripts for local users, groups and folder rights | `PowerShell` `Shell` |
 
 ### 🧰 Tools & Teaching
 
 | | Project | What it does | Stack |
 | :-: | :-- | :-- | :-- |
-| 🟢 | [**Python-Mentoring-Labs**](https://github.com/www8351/Python-Mentoring-Labs-for-Junior-Engineers) | Seven labs taking a junior from `input()` scripts to pure, typed, tested functions. Each lab pairs with the real beginner bug it replaced | `Python` |
-| 🟢 | [**Claude_Quota_Line**](https://github.com/www8351/Claude_Quota_Line) | Two-line terminal status line showing context window, 5-hour and weekly usage limits | `PowerShell` |
-| 🟢 | [**Kickoff**](https://github.com/www8351/Kickoff) | `ccode` opens a Claude Code workspace in one command: global rules, git with a baseline commit that skips secret-looking files, rolling backups of project state and a versioned rules template. `qline` turns on Claude_Quota_Line per project | `PowerShell` |
+| 🟢 | [**Python-Mentoring-Labs**](https://github.com/www8351/Python-Mentoring-Labs-for-Junior-Engineers) | Seven labs from beginner scripts to tested code | `Python` |
+| 🟢 | [**Claude_Quota_Line**](https://github.com/www8351/Claude_Quota_Line) | Terminal status line for usage limits | `PowerShell` |
+| 🟢 | [**Kickoff**](https://github.com/www8351/Kickoff) | One command to set up a Claude Code workspace | `PowerShell` |
 
 <sub>🔒 Two private repositories: <b>Vertex_Command</b>, the production codebase behind the showcases, and <b>The-Binary-Ledger</b>, a Knesset voting-transparency index.</sub>
 
