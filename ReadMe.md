@@ -25,7 +25,9 @@
 | | Project | What it does | Stack |
 | :-: | :-- | :-- | :-- |
 | 🟡 | [**Gold_BOT_Alaret**](https://github.com/www8351/Gold_BOT_Alaret) | XAUUSD Quarterly-Theory engine. Deterministic core for quarters, HTF bias, SMC, volume profile and risk, routed to Telegram, a dashboard and MT5. **143 tests.** Live orders built but off by default | `Python` |
-| 🟡 | [**Account_Guardian_V2**](https://github.com/www8351/Account_Guardian_V2) | Expert Advisor that watches cumulative daily loss across the whole account and locks it, persisted so a restart cannot clear it early. Earlier work: [V1](https://github.com/www8351/Account_Guardian-V1) · [Release](https://github.com/www8351/AccountGuardian-Release) | `MQL5` |
+| 🟡 | [**Agent-AI**](https://github.com/www8351/Agent-AI) | QuantCloud-Agent. Market intelligence for futures, gold and crypto that writes trade ideas for human review and never places orders. Phase 1 skeleton: three FastAPI services on a shared core, a Valkey bus, a Supabase schema and a hardened compose stack. **198 tests, 95% coverage gate** | `Python` |
+| 🟢 | [**AccountGuardian**](https://github.com/www8351/AccountGuardian-Release) | Expert Advisor that locks the whole account at its daily loss limit until 01:00 server time. Closes every position, deletes pending orders, and rebuilds the day from broker history so a restart cannot clear the lock. Double-click installer with nine checks. Source: [V1](https://github.com/www8351/Account_Guardian-V1) | `MQL5` |
+| 🟡 | [**Account_Guardian_V2**](https://github.com/www8351/Account_Guardian_V2) | The next version of the guardian, adding an equity peak floor on top of the daily lock. Spec locked, implementation in progress | `MQL5` |
 
 ### 🌐 Full-Stack SaaS
 
@@ -44,6 +46,7 @@
 | 🟢 | [**Linux-Hardening-and-System**](https://github.com/www8351/Linux-Hardening-and-System) | `ossys` turns shell-injection admin scripts into a safe, testable CLI. Plugin system and a closed-by-default tool server. **206 tests, 82% coverage** | `Python` |
 | 🟢 | [**Build-Test-Deploy**](https://github.com/www8351/Build-Test-Deploy) | DevOps lab from interactive menus to a Jenkins pipeline. 6 build jobs plus 8 security and cloud jobs. **40 tests at 93% + 16 bats** | `Python` `Shell` |
 | 🟢 | [**5-DevOps-Toolkit**](https://github.com/www8351/5-DevOps-Toolkit) | Single-purpose Linux, Docker and AWS tools on one shared engine, each with `--help`, dry-run and root guards. **53 tests, 5 green CI checks** | `Shell` `Python` |
+| 🟡 | [**Active_Directory**](https://github.com/www8351/Active_Directory) | Numbered admin scripts for local users, groups and folder rights. 11 PowerShell scripts, from creating a user to a full user, group and ACL provision in one call, plus a non-interactive `chpasswd` script for Linux | `PowerShell` `Shell` |
 
 ### 🧰 Tools & Teaching
 
@@ -51,6 +54,7 @@
 | :-: | :-- | :-- | :-- |
 | 🟢 | [**Python-Mentoring-Labs**](https://github.com/www8351/Python-Mentoring-Labs-for-Junior-Engineers) | Seven labs taking a junior from `input()` scripts to pure, typed, tested functions. Each lab pairs with the real beginner bug it replaced | `Python` |
 | 🟢 | [**Claude_Quota_Line**](https://github.com/www8351/Claude_Quota_Line) | Two-line terminal status line showing context window, 5-hour and weekly usage limits | `PowerShell` |
+| 🟢 | [**Kickoff**](https://github.com/www8351/Kickoff) | `ccode` opens a Claude Code workspace in one command: global rules, git with a baseline commit that skips secret-looking files, rolling backups of project state and a versioned rules template. `qline` turns on Claude_Quota_Line per project | `PowerShell` |
 
 <sub>🔒 Two private repositories: <b>Vertex_Command</b>, the production codebase behind the showcases, and <b>The-Binary-Ledger</b>, a Knesset voting-transparency index.</sub>
 
@@ -61,6 +65,7 @@
 | 🧪 Project | Tests | Coverage | Gate |
 | :-- | :-: | :-: | :-- |
 | Linux-Hardening-and-System | **206** | 82% | mypy strict |
+| Agent-AI | **198** | 99 to 100% | mypy strict, 95% gate |
 | Gold_BOT_Alaret | **143** | | pytest |
 | 5-DevOps-Toolkit | **53** | | bats + pytest, 5 CI checks |
 | Trades_Journal · Tradezella | **48** | | vitest |
@@ -75,9 +80,9 @@
 | :-- | :-- |
 | 💬 **Languages** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white) ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-336791?style=flat-square&logo=postgresql&logoColor=white) ![MQL5](https://img.shields.io/badge/MQL5-0B3D91?style=flat-square) |
 | 🌐 **Frontend & SaaS** | ![React 19](https://img.shields.io/badge/React%2019-20232A?style=flat-square&logo=react&logoColor=white) ![Next.js 16](https://img.shields.io/badge/Next.js%2016-000000?style=flat-square&logo=nextdotjs&logoColor=white) ![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white) ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) ![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=flat-square&logo=stripe&logoColor=white) ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white) |
-| ⚙️ **Backend & Realtime** | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) ![Express 5](https://img.shields.io/badge/Express%205-000000?style=flat-square&logo=express&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white) ![Drizzle](https://img.shields.io/badge/Drizzle-C5F74F?style=flat-square&logo=drizzle&logoColor=black) |
+| ⚙️ **Backend & Realtime** | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) ![Express 5](https://img.shields.io/badge/Express%205-000000?style=flat-square&logo=express&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white) ![Drizzle](https://img.shields.io/badge/Drizzle-C5F74F?style=flat-square&logo=drizzle&logoColor=black) ![Valkey](https://img.shields.io/badge/Valkey-6983FF?style=flat-square) |
 | ☁️ **DevOps & Cloud** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white) ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white) ![OpenTofu](https://img.shields.io/badge/OpenTofu-FFDA18?style=flat-square&logo=opentofu&logoColor=black) ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) |
-| 🔭 **Observability** | ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white) ![Loki](https://img.shields.io/badge/Loki-F46800?style=flat-square&logo=grafana&logoColor=white) ![Vector](https://img.shields.io/badge/Vector-1F6FEB?style=flat-square) |
+| 🔭 **Observability** | ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white) ![Loki](https://img.shields.io/badge/Loki-F46800?style=flat-square&logo=grafana&logoColor=white) ![Vector](https://img.shields.io/badge/Vector-1F6FEB?style=flat-square) ![Sentry](https://img.shields.io/badge/Sentry-362D59?style=flat-square&logo=sentry&logoColor=white) |
 | 🛡️ **Security** | Trivy · CycloneDX SBOM · cosign · gitleaks · UFW and SSH hardening · Cilium · Falco |
 | ✅ **Quality** | pytest · vitest · bats · mypy strict · ruff · coverage gates · TDD |
 | 📈 **Trading** | MetaTrader 5 API · TwelveData · Tradovate · TopstepX · Rithmic |
