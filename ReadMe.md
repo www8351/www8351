@@ -18,7 +18,9 @@
 
 ## 🚀 `ls ~/projects`
 
-> 🟢 Released or complete &nbsp;·&nbsp; 🟡 In development &nbsp;·&nbsp; 🔵 Public showcase of a private codebase
+> 🟢 Released or complete<br/>
+> 🟡 In development<br/>
+> 🔵 Public showcase of a private codebase
 
 ### 📈 Trading Systems
 
