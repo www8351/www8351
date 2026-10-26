@@ -1,13 +1,13 @@
 {
  "user": "www8351",
- "generated_at": "2026-10-25T08:29:59Z",
+ "generated_at": "2026-10-26T09:02:14Z",
  "stats": {
   "total": 1200,
   "active_days": 82,
   "current_streak": {
-   "days": 4,
-   "from": "2026-10-21",
-   "to": "2026-10-24"
+   "days": 0,
+   "from": null,
+   "to": null
   },
   "longest_streak": {
    "days": 10,
@@ -1842,6 +1842,11 @@
   },
   {
    "date": "2026-10-25",
+   "count": 0,
+   "level": 0
+  },
+  {
+   "date": "2026-10-26",
    "count": 0,
    "level": 0
   }
