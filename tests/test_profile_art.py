@@ -15,6 +15,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 import fetch_contributions as fc  # noqa: E402
+import render_city_svg as rc  # noqa: E402
 import render_heatmap_svg as rh  # noqa: E402
 import render_whoami_svg as rw  # noqa: E402
 
@@ -47,6 +48,7 @@ def calendar_html(counts: list[int], start: date, total_line: str | None = "1,09
 
 
 START = date(2025, 10, 5)
+SVG = "{http://www.w3.org/2000/svg}"
 
 
 class ParseTests(unittest.TestCase):
@@ -155,6 +157,79 @@ class RenderTests(unittest.TestCase):
         right = max(float(e.get("x")) + rh.CELL for e in cells)
         self.assertGreaterEqual(left, rh.PAD)
         self.assertLessEqual(right, rh.WIDTH - rh.PAD)
+
+    def city_data(self, counts: list[int]) -> dict:
+        days, total = fc.parse(calendar_html(counts, START))
+        return {"user": "www8351", "generated_at": "2026-10-06T00:00:00Z", "stats": fc.stats(days, total), "days": days}
+
+    def lots(self, root: ET.Element) -> list[ET.Element]:
+        """Groups carrying a hover title: one per day."""
+        return [e for e in root.iter() if e.tag.endswith("}g") and e.find(f"{SVG}title") is not None]
+
+    def test_city_one_lot_per_day(self) -> None:
+        counts = [i % 7 for i in range(371)]
+        for animate in (True, False):
+            root = self.assert_svg(rc.render(self.city_data(counts), animate))
+            lots = self.lots(root)
+            self.assertEqual(len(lots), 371)
+            buildings = [g for g in lots if len(g.findall(f".//{SVG}polygon")) == 4]
+            self.assertEqual(len(buildings), sum(1 for n in counts if n))
+
+    def test_city_height_follows_square_root(self) -> None:
+        self.assertEqual(rc.height(0, 100), 0)
+        self.assertEqual(rc.height(100, 100), rc.MAX_H)
+        self.assertAlmostEqual(rc.height(25, 100), rc.MAX_H / 2)
+        self.assertEqual(rc.height(1, 10_000), rc.MIN_H)
+
+    def test_city_best_day_label_above_tallest(self) -> None:
+        counts = [0] * 371
+        counts[40], counts[200], counts[300] = 4, 110, 30
+        data = self.city_data(counts)
+        lots = rc.place(data["days"])
+        tallest = max(lots, key=lambda b: b["h"])
+        self.assertEqual(tallest["day"]["date"], data["stats"]["best_day"]["date"])
+        root = self.assert_svg(rc.render(data, False))
+        label = next(e for e in root.iter() if e.tag.endswith("text") and e.text == "Best Day")
+        roofs = [
+            float(p.split(",")[1])
+            for e in root.iter() if e.tag.endswith("polygon")
+            for p in e.get("points").split()
+        ]
+        self.assertLess(float(label.get("y")), min(roofs))
+        self.assertGreater(float(label.get("y")), rc.TITLE_BAR)
+
+    def test_city_blank_year_has_no_label(self) -> None:
+        markup = rc.render(None)
+        root = self.assert_svg(markup)
+        self.assertNotIn("Best Day", markup)
+        self.assertEqual(len(self.lots(root)), len(fc.placeholder_days()))
+
+    def test_city_fits_a_54_week_calendar(self) -> None:
+        days = [
+            {"date": (date(2025, 10, 5) + timedelta(days=i)).isoformat(), "count": 1 + i % 50, "level": 1 + i % 4}
+            for i in range(378)
+        ]
+        data = {"user": "x", "generated_at": "2026-10-06T00:00:00Z", "stats": fc.stats(days, None), "days": days}
+        root = self.assert_svg(rc.render(data, False))
+        xs, ys = [], []
+        for e in root.iter():
+            if e.tag.endswith("polygon"):
+                for p in e.get("points").split():
+                    x, y = map(float, p.split(","))
+                    xs.append(x)
+                    ys.append(y)
+        self.assertGreaterEqual(min(xs), rc.PAD)
+        self.assertLessEqual(max(xs), rc.WIDTH - rc.PAD)
+        self.assertGreaterEqual(min(ys), rc.TITLE_BAR)
+
+    def test_city_static_has_no_animation(self) -> None:
+        data = self.city_data([i % 7 for i in range(371)])
+        animated = rc.render(data, True)
+        self.assertIn("@keyframes rise", animated)
+        self.assertIn("prefers-reduced-motion", animated)
+        still = rc.render(data, False)
+        self.assertNotIn("@keyframes", still)
+        self.assertNotIn("animation", still)
 
     def test_whoami(self) -> None:
         lines = ["  .:-=+*#%@", "", " <&> \"q\""]

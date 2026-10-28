@@ -100,21 +100,16 @@ def tile(x: float, y: float, w: float, label: str, value: str, unit: str, sub: s
     )
 
 
-def render(data: dict | None, animate: bool = True) -> str:
-    days = data["days"] if data else placeholder_days()
-    s = data["stats"] if data else None
+def summary(s: dict | None, x: float, w: float, y: float, delay: float, animate: bool) -> tuple[str, float]:
+    """Caption, colour legend and stat tiles spanning x to x + w, baseline at y.
 
-    grid_w = week_count(days) * PITCH - GAP
-    x0 = (WIDTH - LABEL_W - grid_w) / 2 + LABEL_W
-    y0 = TITLE_BAR + PAD + 18
-    cells, _ = grid(days, x0, y0, animate)
-
-    y = y0 + 7 * PITCH + 14
+    Returns the markup and the bottom edge of the tiles.
+    """
     if s:
         caption = f"{s['total']:,} contributions in the last year"
     else:
         caption = "Waiting for the first daily refresh"
-    legend_x = x0 + grid_w - 5 * PITCH - 34
+    legend_x = x + w - 5 * PITCH - 34
     legend = (
         f'<text x="{legend_x - 6}" y="{y + 4}" font-size="10" fill="{MUTED}" text-anchor="end">Less</text>'
         + "".join(
@@ -123,12 +118,11 @@ def render(data: dict | None, animate: bool = True) -> str:
         )
         + f'<text x="{legend_x + 5 * PITCH + 4}" y="{y + 4}" font-size="10" fill="{MUTED}">More</text>'
     )
-    footer = f'<text x="{x0}" y="{y + 4}" font-size="12" fill="{TEXT}">{esc(caption)}</text>' + legend
+    footer = f'<text x="{x + LABEL_W}" y="{y + 4}" font-size="12" fill="{TEXT}">{esc(caption)}</text>' + legend
 
     ty = y + 22
     gap = 12
-    tw = (grid_w + LABEL_W - 3 * gap) / 4
-    tx = x0 - LABEL_W
+    tw = (w - 3 * gap) / 4
     if s:
         cur, lon, best = s["current_streak"], s["longest_streak"], s["best_day"]
         tiles = [
@@ -140,27 +134,43 @@ def render(data: dict | None, animate: bool = True) -> str:
     else:
         tiles = [(name, "--", "", "") for name in ("contributions", "current streak", "longest streak", "best day")]
     tiles_markup = "".join(
-        tile(tx + i * (tw + gap), ty, tw, *t, delay=0.9 + i * 0.12, animate=animate) for i, t in enumerate(tiles)
+        tile(x + i * (tw + gap), ty, tw, *t, delay=delay + i * 0.12, animate=animate) for i, t in enumerate(tiles)
+    )
+    return footer + tiles_markup, ty + 66
+
+
+def stamp(data: dict | None) -> str:
+    if not data:
+        return ""
+    return (
+        f'<text x="{WIDTH - 16}" y="{TITLE_BAR / 2 + 4}" font-size="10" fill="{MUTED}" '
+        f'text-anchor="end">updated {esc(data["generated_at"][:10])}</text>'
     )
 
-    height = int(ty + 66 + PAD)
-    stamp = ""
-    if data:
-        stamp = (
-            f'<text x="{WIDTH - 16}" y="{TITLE_BAR / 2 + 4}" font-size="10" fill="{MUTED}" '
-            f'text-anchor="end">updated {esc(data["generated_at"][:10])}</text>'
-        )
+
+TILE_STYLE = "@keyframes up{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}.t{animation:up .4s ease-out both}"
+
+
+def render(data: dict | None, animate: bool = True) -> str:
+    days = data["days"] if data else placeholder_days()
+    s = data["stats"] if data else None
+
+    grid_w = week_count(days) * PITCH - GAP
+    x0 = (WIDTH - LABEL_W - grid_w) / 2 + LABEL_W
+    y0 = TITLE_BAR + PAD + 18
+    cells, _ = grid(days, x0, y0, animate)
+
+    footer, bottom = summary(s, x0 - LABEL_W, grid_w + LABEL_W, y0 + 7 * PITCH + 14, 0.9, animate)
+    height = int(bottom + PAD)
     style = ""
     if animate:
         style = (
             "@keyframes drop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}"
-            ".c{animation:drop .35s ease-out both}"
-            "@keyframes up{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}"
-            ".t{animation:up .4s ease-out both}"
+            ".c{animation:drop .35s ease-out both}" + TILE_STYLE
         )
     user = data["user"] if data else "www8351"
     title = f"refael@github: ~ $ ./contributions.sh {user}"
-    return window(WIDTH, height, title, stamp + cells + footer + tiles_markup, style)
+    return window(WIDTH, height, title, stamp(data) + cells + footer, style)
 
 
 def main() -> None:
