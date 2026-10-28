@@ -4,7 +4,7 @@
 
 <br/><br/>
 
-<img src="assets/contrib-heatmap.svg" width="100%" alt="GitHub contribution graph for the last year, refreshed daily."/>
+<img src="assets/contrib-city.svg" width="100%" alt="GitHub contributions for the last year drawn as a city, one building per day, refreshed daily."/>
 
 <h3><code>refael@github ~ $ ./links.sh</code></h3>
 

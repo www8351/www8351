@@ -34,9 +34,12 @@ jobs:
       - name: Render graph
         run: python3 scripts/render_heatmap_svg.py
 
+      - name: Render city
+        run: python3 scripts/render_city_svg.py
+
       - name: Commit if changed
         run: |
-          git add data/contributions.json assets/contrib-heatmap.svg
+          git add data/contributions.json assets/contrib-heatmap.svg assets/contrib-city.svg
           if git diff --cached --quiet; then
             echo "No change."
             exit 0
