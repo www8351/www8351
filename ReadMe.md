@@ -64,8 +64,7 @@
 | | Project | What it does | Stack |
 | :-: | :-- | :-- | :-- |
 | 🟡 | [**Gold_BOT_Alaret**](https://github.com/www8351/Gold_BOT_Alaret) | XAUUSD signal engine on ICT Quarterly Theory | `Python` |
-| 🟡 | [**Agent-AI**](https://github.com/www8351/Agent-AI) | Market intelligence for futures, gold and crypto, advisory only | `Python` |
-| 🟢 | [**AccountGuardian**](https://github.com/www8351/AccountGuardian-Release) | Locks the whole MT5 account at its daily loss limit | `MQL5` |
+| 🟢 | [**AccountGuardian**](https://github.com/www8351/AccountGuardian-Release) | Locks the whole MT5 account at its daily loss limit, with an [installation video](https://github.com/www8351/AccountGuardian-Release/blob/main/Guide_Installation.mp4) | `MQL5` |
 | 🟢 | [**Account_Guardian-V1**](https://github.com/www8351/Account_Guardian-V1) | Source of the released guardian, with spec, test vectors and evidence | `MQL5` `PowerShell` |
 | 🟡 | [**Account_Guardian_V2**](https://github.com/www8351/Account_Guardian_V2) | Next guardian version, adds an equity peak floor | `MQL5` |
 
@@ -96,7 +95,7 @@
 | 🟢 | [**Claude_Quota_Line**](https://github.com/www8351/Claude_Quota_Line) | Terminal status line for usage limits | `PowerShell` |
 | 🟢 | [**Kickoff**](https://github.com/www8351/Kickoff) | One command to set up a Claude Code workspace | `PowerShell` |
 
-<sub>🔒 Two private repositories: <b>Vertex_Command</b>, the production codebase behind the showcases, and <b>The-Binary-Ledger</b>, a Knesset voting-transparency index.</sub>
+<sub>🔒 Four private repositories: <b>Vertex_Command</b>, the production codebase behind the showcases; <b>The-Binary-Ledger</b>, a Knesset voting-transparency index; <b>Agent-AI</b>, market intelligence for futures, gold and crypto; and <b>CRM</b>, a CRM build now in first review with its first client.</sub>
 
 <br/>
 
@@ -105,11 +104,10 @@
 | 🧪 Project | Tests | Coverage | Gate |
 | :-- | :-: | :-: | :-- |
 | Linux-Hardening-and-System | **206** | 82% | mypy strict |
-| Agent-AI | **198** | 99 to 100% | mypy strict, 95% gate |
 | Gold_BOT_Alaret | **143** | | pytest |
+| Docker-DevOps-Tooling | **75** | **100%** | mypy strict, Trivy |
 | 5-DevOps-Toolkit | **53** | | bats + pytest, 5 CI checks |
 | Trades_Journal · Tradezella | **48** | | vitest |
-| Docker-DevOps-Tooling | **45** | **100%** | mypy strict, Trivy |
 | Build-Test-Deploy | **40 + 16** | 93% | pytest + bats |
 
 <br/>
