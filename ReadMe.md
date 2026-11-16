@@ -64,9 +64,8 @@
 | | Project | What it does | Stack |
 | :-: | :-- | :-- | :-- |
 | 🟡 | [**Gold_BOT_Alaret**](https://github.com/www8351/Gold_BOT_Alaret) | XAUUSD signal engine on ICT Quarterly Theory | `Python` |
-| 🟢 | [**AccountGuardian**](https://github.com/www8351/AccountGuardian-Release) | Locks the whole MT5 account at its daily loss limit, with an [installation video](https://github.com/www8351/AccountGuardian-Release/blob/main/Guide_Installation.mp4) | `MQL5` |
-| 🟢 | [**Account_Guardian-V1**](https://github.com/www8351/Account_Guardian-V1) | Source of the released guardian, with spec, test vectors and evidence | `MQL5` `PowerShell` |
-| 🟡 | [**Account_Guardian_V2**](https://github.com/www8351/Account_Guardian_V2) | Next guardian version, adds an equity peak floor | `MQL5` |
+| 🟢 | [**AccountGuardian**](https://github.com/www8351/AccountGuardian-Release) | Released as TradeTimeout. Locks the whole MT5 account at its daily loss limit, with an [installation video](https://github.com/www8351/AccountGuardian-Release/blob/main/Guide_Installation.mp4) | `MQL5` |
+| 🟡 | [**Account_Guardian_V2**](https://github.com/www8351/Account_Guardian_V2) | Next guardian version, adds a same day ratchet floor on the limit, realized peak floor is next | `MQL5` |
 
 ### 🌐 Full-Stack SaaS
 
@@ -84,7 +83,8 @@
 | 🟢 | [**Docker-DevOps-Tooling**](https://github.com/www8351/Docker-DevOps-Tooling) | Typed Docker CLI with signed, scanned images | `Python` |
 | 🟢 | [**Linux-Hardening-and-System**](https://github.com/www8351/Linux-Hardening-and-System) | Safe, testable CLI replacing admin shell scripts | `Python` |
 | 🟢 | [**Build-Test-Deploy**](https://github.com/www8351/Build-Test-Deploy) | DevOps lab from shell menus to a Jenkins pipeline | `Python` `Shell` |
-| 🟢 | [**5-DevOps-Toolkit**](https://github.com/www8351/5-DevOps-Toolkit) | Linux, Docker and AWS tools on one shared engine | `Shell` `Python` |
+| 🟢 | [**5-DevOps-Toolkit**](https://github.com/www8351/5-DevOps-Toolkit) | 25 Linux, Docker and AWS tools on one shared engine, with SSH automation | `Shell` `Python` |
+| 🟡 | [**devops-portfolio**](https://github.com/www8351/devops-portfolio) | A tiny API that every other folder packages, tests, deploys and runs | `Python` |
 | 🟡 | [**Active_Directory**](https://github.com/www8351/Active_Directory) | Scripts for local users, groups and folder rights | `PowerShell` `Shell` |
 
 ### 🧰 Tools & Teaching
@@ -95,7 +95,7 @@
 | 🟢 | [**Claude_Quota_Line**](https://github.com/www8351/Claude_Quota_Line) | Terminal status line for usage limits | `PowerShell` |
 | 🟢 | [**Kickoff**](https://github.com/www8351/Kickoff) | One command to set up a Claude Code workspace | `PowerShell` |
 
-<sub>🔒 Four private repositories: <b>Vertex_Command</b>, the production codebase behind the showcases; <b>The-Binary-Ledger</b>, a Knesset voting-transparency index; <b>Agent-AI</b>, market intelligence for futures, gold and crypto; and <b>CRM</b>, a CRM build now in first review with its first client.</sub>
+<sub>🔒 Six private repositories: <b>Vertex_Command</b>, the production codebase behind the showcases; <b>The-Binary-Ledger</b>, a Knesset voting-transparency index; <b>Agent-AI</b>, market intelligence for futures, gold and crypto; <b>CRM</b>, a CRM build now in first review with its first client; <b>Account_Guardian-V1</b>, the source of the released guardian, with spec, test vectors and evidence; and <b>refael.tech</b>, my personal brand site, in planning.</sub>
 
 <br/>
 
@@ -103,10 +103,10 @@
 
 | 🧪 Project | Tests | Coverage | Gate |
 | :-- | :-: | :-: | :-- |
+| 5-DevOps-Toolkit | **256** | | bats + pytest, 6 CI checks |
 | Linux-Hardening-and-System | **206** | 82% | mypy strict |
 | Gold_BOT_Alaret | **143** | | pytest |
 | Docker-DevOps-Tooling | **75** | **100%** | mypy strict, Trivy |
-| 5-DevOps-Toolkit | **53** | | bats + pytest, 5 CI checks |
 | Trades_Journal · Tradezella | **48** | | vitest |
 | Build-Test-Deploy | **40 + 16** | 93% | pytest + bats |
 
