@@ -82,7 +82,7 @@
 | 🟡 | 🔒 **The-Binary-Ledger** | Knesset voting-transparency index, Hebrew and RTL | `Python` `TS` |
 | 🟡 | 🔒 **refael.tech** | My personal brand site: portfolio, services and a template store, in planning | `TS` |
 
-### 📈 Trading Systems
+### 📈 Trading Tools
 
 | | Project | What it does | Stack |
 | :-: | :-- | :-- | :-- |
