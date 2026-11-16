@@ -78,11 +78,6 @@
 
 | | Project | What it does | Stack |
 | :-: | :-- | :-- | :-- |
-| 🟢 | 🔒 **Vertex_Command** | The production codebase behind the showcases: copy trading and trade execution platform | `TS` `Python` |
-| 🔵 | [**Vertex_Command_Showcase**](https://github.com/www8351/Vertex_Command_Showcase) | Copy trading and trade execution platform | `TS` `Python` |
-| 🟡 | [**Syncer_Q**](https://github.com/www8351/Syncer_Q) | The same platform, packaged for deployment | `TS` `Python` |
-| 🔵 | [**Trades_Journal**](https://github.com/www8351/Trades_Journal) | Trading journal rebuilt from raw executions | `TS` |
-| 🟢 | [**Tradezella-Example**](https://github.com/www8351/Tradezella-Example) | The journal as a full build, deployed on Vercel | `TS` |
 | 🟡 | 🔒 **CRM** | Bazman, appointment booking for barbershops and beauty salons at one flat price, now in first review with its first client | `TS` |
 | 🟡 | 🔒 **The-Binary-Ledger** | Knesset voting-transparency index, Hebrew and RTL | `Python` `TS` |
 | 🟡 | 🔒 **refael.tech** | My personal brand site: portfolio, services and a template store, in planning | `TS` |
@@ -91,6 +86,11 @@
 
 | | Project | What it does | Stack |
 | :-: | :-- | :-- | :-- |
+| 🟢 | 🔒 **Vertex_Command** | The production codebase behind the showcases: copy trading and trade execution platform | `TS` `Python` |
+| 🔵 | [**Vertex_Command_Showcase**](https://github.com/www8351/Vertex_Command_Showcase) | Copy trading and trade execution platform | `TS` `Python` |
+| 🟡 | [**Syncer_Q**](https://github.com/www8351/Syncer_Q) | The same platform, packaged for deployment | `TS` `Python` |
+| 🔵 | [**Trades_Journal**](https://github.com/www8351/Trades_Journal) | Trading journal rebuilt from raw executions | `TS` |
+| 🟢 | [**Tradezella-Example**](https://github.com/www8351/Tradezella-Example) | The journal as a full build, deployed on Vercel | `TS` |
 | 🟡 | [**Gold_BOT_Alaret**](https://github.com/www8351/Gold_BOT_Alaret) | XAUUSD signal engine on ICT Quarterly Theory | `Python` |
 | 🟢 | [**AccountGuardian**](https://github.com/www8351/AccountGuardian-Release) | Released as TradeTimeout. Locks the whole MT5 account at its daily loss limit, with an [installation video](https://github.com/www8351/AccountGuardian-Release/blob/main/Guide_Installation.mp4) | `MQL5` |
 | 🟢 | 🔒 **Account_Guardian-V1** | Source of the released guardian, with spec, test vectors and evidence | `MQL5` `PowerShell` |
