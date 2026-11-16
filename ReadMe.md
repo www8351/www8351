@@ -57,45 +57,46 @@
 
 > 🟢 Released or complete<br/>
 > 🟡 In development<br/>
-> 🔵 Public showcase of a private codebase
+> 🔵 Public showcase of a private codebase<br/>
+> 🔒 Private repository
 
-### 📈 Trading Systems
-
-| | Project | What it does | Stack |
-| :-: | :-- | :-- | :-- |
-| 🟡 | [**Gold_BOT_Alaret**](https://github.com/www8351/Gold_BOT_Alaret) | XAUUSD signal engine on ICT Quarterly Theory | `Python` |
-| 🟢 | [**AccountGuardian**](https://github.com/www8351/AccountGuardian-Release) | Locks the whole MT5 account at its daily loss limit, with an [installation video](https://github.com/www8351/AccountGuardian-Release/blob/main/Guide_Installation.mp4) | `MQL5` |
-| 🟢 | [**Account_Guardian-V1**](https://github.com/www8351/Account_Guardian-V1) | Source of the released guardian, with spec, test vectors and evidence | `MQL5` `PowerShell` |
-| 🟡 | [**Account_Guardian_V2**](https://github.com/www8351/Account_Guardian_V2) | Next guardian version, adds an equity peak floor | `MQL5` |
-
-### 🌐 Full-Stack SaaS
-
-| | Project | What it does | Stack |
-| :-: | :-- | :-- | :-- |
-| 🔵 | [**Vertex_Command_Showcase**](https://github.com/www8351/Vertex_Command_Showcase) | Copy trading and trade execution platform | `TS` `Python` |
-| 🟡 | [**Syncer_Q**](https://github.com/www8351/Syncer_Q) | The same platform, packaged for deployment | `TS` `Python` |
-| 🔵 | [**Trades_Journal**](https://github.com/www8351/Trades_Journal) | Trading journal rebuilt from raw executions | `TS` |
-| 🟢 | [**Tradezella-Example**](https://github.com/www8351/Tradezella-Example) | The journal as a full build, deployed on Vercel | `TS` |
-
-### 🛠️ DevOps & Systems
+### 🛠️ DevOps, Systems & Tools
 
 | | Project | What it does | Stack |
 | :-: | :-- | :-- | :-- |
 | 🟢 | [**Docker-DevOps-Tooling**](https://github.com/www8351/Docker-DevOps-Tooling) | Typed Docker CLI with signed, scanned images | `Python` |
 | 🟢 | [**Linux-Hardening-and-System**](https://github.com/www8351/Linux-Hardening-and-System) | Safe, testable CLI replacing admin shell scripts | `Python` |
 | 🟢 | [**Build-Test-Deploy**](https://github.com/www8351/Build-Test-Deploy) | DevOps lab from shell menus to a Jenkins pipeline | `Python` `Shell` |
-| 🟢 | [**5-DevOps-Toolkit**](https://github.com/www8351/5-DevOps-Toolkit) | Linux, Docker and AWS tools on one shared engine | `Shell` `Python` |
+| 🟢 | [**5-DevOps-Toolkit**](https://github.com/www8351/5-DevOps-Toolkit) | 25 Linux, Docker and AWS tools on one shared engine, with SSH automation | `Shell` `Python` |
+| 🟡 | [**devops-portfolio**](https://github.com/www8351/devops-portfolio) | A tiny API that every other folder packages, tests, deploys and runs | `Python` |
 | 🟡 | [**Active_Directory**](https://github.com/www8351/Active_Directory) | Scripts for local users, groups and folder rights | `PowerShell` `Shell` |
-
-### 🧰 Tools & Teaching
-
-| | Project | What it does | Stack |
-| :-: | :-- | :-- | :-- |
 | 🟢 | [**Python-Mentoring-Labs**](https://github.com/www8351/Python-Mentoring-Labs-for-Junior-Engineers) | Seven labs from beginner scripts to tested code | `Python` |
 | 🟢 | [**Claude_Quota_Line**](https://github.com/www8351/Claude_Quota_Line) | Terminal status line for usage limits | `PowerShell` |
 | 🟢 | [**Kickoff**](https://github.com/www8351/Kickoff) | One command to set up a Claude Code workspace | `PowerShell` |
 
-<sub>🔒 Four private repositories: <b>Vertex_Command</b>, the production codebase behind the showcases; <b>The-Binary-Ledger</b>, a Knesset voting-transparency index; <b>Agent-AI</b>, market intelligence for futures, gold and crypto; and <b>CRM</b>, a CRM build now in first review with its first client.</sub>
+### 🌐 Full-Stack & Web
+
+| | Project | What it does | Stack |
+| :-: | :-- | :-- | :-- |
+| 🟡 | 🔒 **CRM** | Bazman, appointment booking for barbershops and beauty salons at one flat price, now in first review with its first client | `TS` |
+| 🟡 | 🔒 **The-Binary-Ledger** | Knesset voting-transparency index, Hebrew and RTL | `Python` `TS` |
+| 🟡 | 🔒 **refael.tech** | My personal brand site: portfolio, services and a template store, in planning | `TS` |
+
+### 📈 Trading Systems
+
+| | Project | What it does | Stack |
+| :-: | :-- | :-- | :-- |
+| 🟢 | 🔒 **Vertex_Command** | The production codebase behind the showcases: copy trading and trade execution platform | `TS` `Python` |
+| 🔵 | [**Vertex_Command_Showcase**](https://github.com/www8351/Vertex_Command_Showcase) | Copy trading and trade execution platform | `TS` `Python` |
+| 🟡 | [**Syncer_Q**](https://github.com/www8351/Syncer_Q) | The same platform, packaged for deployment | `TS` `Python` |
+| 🔵 | [**Trades_Journal**](https://github.com/www8351/Trades_Journal) | Trading journal rebuilt from raw executions | `TS` |
+| 🟢 | [**Tradezella-Example**](https://github.com/www8351/Tradezella-Example) | The journal as a full build, deployed on Vercel | `TS` |
+| 🟡 | [**Gold_BOT_Alaret**](https://github.com/www8351/Gold_BOT_Alaret) | XAUUSD signal engine on ICT Quarterly Theory | `Python` |
+| 🟢 | [**AccountGuardian**](https://github.com/www8351/AccountGuardian-Release) | Released as TradeTimeout. Locks the whole MT5 account at its daily loss limit, with an [installation video](https://github.com/www8351/AccountGuardian-Release/blob/main/Guide_Installation.mp4) | `MQL5` |
+| 🟢 | 🔒 **Account_Guardian-V1** | Source of the released guardian, with spec, test vectors and evidence | `MQL5` `PowerShell` |
+| 🟡 | [**Account_Guardian_V2**](https://github.com/www8351/Account_Guardian_V2) | Next guardian version, adds a same day ratchet floor on the limit, realized peak floor is next | `MQL5` |
+| 🟡 | 🔒 **Agent-AI** | Market intelligence for futures, gold and crypto, with human reviewed trade ideas and no order routing | `Python` |
+| 🟡 | 🔒 **automated-trading** | Rule based automated trading system, crypto paper and testnet first | `Python` |
 
 <br/>
 
@@ -103,10 +104,10 @@
 
 | 🧪 Project | Tests | Coverage | Gate |
 | :-- | :-: | :-: | :-- |
+| 5-DevOps-Toolkit | **256** | | bats + pytest, 6 CI checks |
 | Linux-Hardening-and-System | **206** | 82% | mypy strict |
 | Gold_BOT_Alaret | **143** | | pytest |
 | Docker-DevOps-Tooling | **75** | **100%** | mypy strict, Trivy |
-| 5-DevOps-Toolkit | **53** | | bats + pytest, 5 CI checks |
 | Trades_Journal · Tradezella | **48** | | vitest |
 | Build-Test-Deploy | **40 + 16** | 93% | pytest + bats |
 
